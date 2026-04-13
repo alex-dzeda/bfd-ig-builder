@@ -25,7 +25,14 @@ jobs:
         with:
           ruby-version: '3.1'
 
+      - name: Install Jekyll and Bundler
+        working-directory: ./apps/bfd-model-idr/sushi
+        run: |
+          gem install bundler
+          bundle install
+
       - name: Setup Java (for IG Publisher)
+
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
