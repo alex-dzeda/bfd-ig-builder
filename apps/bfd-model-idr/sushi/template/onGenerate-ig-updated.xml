@@ -1,0 +1,3530 @@
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+   <id value="bfd"/>
+   <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+         <p class="res-header-id">
+            <b>Generated Narrative: ImplementationGuide bfd</b>
+         </p>
+         <a name="bfd"> </a>
+         <a name="hcbfd"> </a>
+         <h2>BFD</h2>
+         <p>The official URL for this implementation guide is: </p>
+         <pre>https://bluebutton.cms.gov/fhir/ImplementationGuide/bfd</pre>
+      </div>
+   </text>
+   <url value="https://bluebutton.cms.gov/fhir/ImplementationGuide/bfd"/>
+   <version value="0.1.0"/>
+   <name value="BFD"/>
+   <title value="BFD Model Implementation Guide"/>
+   <status value="active"/>
+   <date value="2026-04-13T14:39:00-05:00"/>
+   <packageId value="bfd"/>
+   <license value="CC0-1.0"/>
+   <fhirVersion value="4.0.1"/>
+   <dependsOn id="hl7tx">
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+         <valueMarkdown value="Automatically added as a dependency - all IGs depend on HL7 Terminology"/>
+      </extension>
+      <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
+      <packageId value="hl7.terminology.r4"/>
+      <version value="7.1.0"/>
+   </dependsOn>
+   <dependsOn id="hl7ext">
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+         <valueMarkdown value="Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"/>
+      </extension>
+      <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+      <packageId value="hl7.fhir.uv.extensions.r4"/>
+      <version value="5.2.0"/>
+   </dependsOn>
+   <dependsOn id="hl7_fhir_us_carin_bb">
+      <uri value="http://hl7.org/fhir/us/carin-bb/ImplementationGuide/hl7.fhir.us.carin-bb"/>
+      <packageId value="hl7.fhir.us.carin-bb"/>
+      <version value="2.1.0"/>
+   </dependsOn>
+   <definition>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="copyrightyear"/>
+         </extension>
+         <extension url="value">
+            <valueString value="2024+"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="releaselabel"/>
+         </extension>
+         <extension url="value">
+            <valueString value="ci-build"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="autoload-resources"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-liquid"/>
+         </extension>
+         <extension url="value">
+            <valueString value="template/liquid"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-liquid"/>
+         </extension>
+         <extension url="value">
+            <valueString value="input/liquid"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-qa"/>
+         </extension>
+         <extension url="value">
+            <valueString value="temp/qa"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-temp"/>
+         </extension>
+         <extension url="value">
+            <valueString value="temp/pages"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-output"/>
+         </extension>
+         <extension url="value">
+            <valueString value="output"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-suppressed-warnings"/>
+         </extension>
+         <extension url="value">
+            <valueString value="input/ignoreWarnings.txt"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-history"/>
+         </extension>
+         <extension url="value">
+            <valueString value="https://bluebutton.cms.gov/fhir/history.html"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="template-html"/>
+         </extension>
+         <extension url="value">
+            <valueString value="template-page.html"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="template-md"/>
+         </extension>
+         <extension url="value">
+            <valueString value="template-page-md.html"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-contact"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-context"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-copyright"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-jurisdiction"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-license"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-publisher"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-version"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-wg"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="active-tables"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="fmm-definition"/>
+         </extension>
+         <extension url="value">
+            <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="propagate-status"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="excludelogbinaryformat"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="tabbed-snapshots"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
+         <valueCode value="hl7.fhir.uv.tools.r4#1.1.2"/>
+      </extension>
+      <grouping id="-str-profile">
+         <name value="Structures: Resource Profiles"/>
+         <description value="These define constraints on FHIR resources for systems conforming to this implementation guide."/>
+      </grouping>
+      <grouping id="-str-extension">
+         <name value="Structures: Extension Definitions"/>
+         <description value="These define constraints on FHIR data types for systems conforming to this implementation guide."/>
+      </grouping>
+      <grouping id="-term-valueset">
+         <name value="Terminology: Value Sets"/>
+         <description value="These define sets of codes used by systems conforming to this implementation guide."/>
+      </grouping>
+      <grouping id="-term-codesystem">
+         <name value="Terminology: Code Systems"/>
+         <description value="These define new code systems used by systems conforming to this implementation guide."/>
+      </grouping>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-BFD-EOB-Pharmacy.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/BFD-EOB-Pharmacy"/>
+         </reference>
+         <name value="BFD EOB Pharmacy Profile"/>
+         <description value="This profile builds on top of the CARIN for Blue Button (C4BB) Explanation of Benefit Pharmacy profile to represent pharmacy claims within BFD."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-CLM-LINE-ANSTHSA-UNIT-CNT.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/CLM-LINE-ANSTHSA-UNIT-CNT"/>
+         </reference>
+         <name value="Anesthesia Unit Count"/>
+         <description value="The base number of units assigned to the line item anesthesia procedure on the carrier claim (non-DMERC)."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-BENE-BUYIN-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/BENE-BUYIN-CD"/>
+         </reference>
+         <name value="Beneficiary Buy-in Indicator"/>
+         <description value="Monthly Part A and/or Part B entitlement indicator."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-BENE-CNTRCT-NUM.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/BENE-CNTRCT-NUM"/>
+         </reference>
+         <name value="Beneficiary Contract Number"/>
+         <description value="The contract number associated with the beneficiary's Medicare coverage."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-BENE-CVRG-TYPE-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/BENE-CVRG-TYPE-CD"/>
+         </reference>
+         <name value="Beneficiary Coverage Type Code"/>
+         <description value="A code identifying the type of Medicare coverage for a beneficiary."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-BENE-DSBLD-STUS-ID.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/BENE-DSBLD-STUS-ID"/>
+         </reference>
+         <name value="Beneficiary Disabled Status Indicator Code"/>
+         <description value="An code indicating if the Beneficiary is entitled to medicare due to a disability."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-BENE-DUAL-STUS-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/BENE-DUAL-STUS-CD"/>
+         </reference>
+         <name value="Beneficiary Dual Status Code"/>
+         <description value="A code identifying the dual eligibility status for a beneficiary."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-BENE-DUAL-TYPE-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/BENE-DUAL-TYPE-CD"/>
+         </reference>
+         <name value="Beneficiary Dual Type Code"/>
+         <description value="A code identifying the dual eligibility type for a beneficiary."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-BENE-ESRD-STUS-ID.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/BENE-ESRD-STUS-ID"/>
+         </reference>
+         <name value="Beneficiary ESRD Status Indicator Code"/>
+         <description value="A beneficiary's ESRD Status indicator."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-BENE-ENRLMT-RSN-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/BENE-ENRLMT-RSN-CD"/>
+         </reference>
+         <name value="Beneficiary Enrollment Reason Code"/>
+         <description value="The reason for a beneficiary's enrollment in Part A/Part B benefits."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-BENE-MDCR-ENTLMT-RSN-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/BENE-MDCR-ENTLMT-RSN-CD"/>
+         </reference>
+         <name value="Beneficiary Entitlement Reason Code"/>
+         <description value="A code identifying the basis in determining a beneficiary's entitlement to Medicare benefits."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-BENE-MDCR-ENTLMT-STUS-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/BENE-MDCR-ENTLMT-STUS-CD"/>
+         </reference>
+         <name value="Beneficiary Entitlement Status Code"/>
+         <description value="The reason for entitlement or termination of a beneficiary's benefits during a period of coverage."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-BENE-LIS-COPMT-LVL-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/BENE-LIS-COPMT-LVL-CD"/>
+         </reference>
+         <name value="Beneficiary LIS Copayment Level Code"/>
+         <description value="Indicates the copayment level for Low Income Subsidy (LIS) beneficiaries"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-BENE-LIS-EFCTV-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/BENE-LIS-EFCTV-CD"/>
+         </reference>
+         <name value="Beneficiary LIS Effective Code"/>
+         <description value="Indicates whether the beneficiary has effective Low Income Subsidy (LIS) coverage"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-BENE-LIS-PTD-PRM-PCT.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/BENE-LIS-PTD-PRM-PCT"/>
+         </reference>
+         <name value="Beneficiary LIS Part D Premium Percentage"/>
+         <description value="Indicates the percentage of Part D premium covered by Low Income Subsidy (LIS)"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-BENE-PBP-NUM.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/BENE-PBP-NUM"/>
+         </reference>
+         <name value="Beneficiary PBP Number"/>
+         <description value="The PBP (Prescription Benefit Plan) number associated with the beneficiary's Medicare coverage."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-BENE-ENRLMT-EMPLR-SBSDY-SW.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/BENE-ENRLMT-EMPLR-SBSDY-SW"/>
+         </reference>
+         <name value="Beneficiary Retiree Drug Subsidy Switch"/>
+         <description value="A switch indicating enrollment by a beneficiary who has an employer subsidy."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-CLM-FED-TYPE-SRVC-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/CLM-FED-TYPE-SRVC-CD"/>
+         </reference>
+         <name value="CMS Service Type Code"/>
+         <description value="Code indicating the type of service, as defined in the CMS Medicare Carrier Manual, for this line item on the non-institutional claim."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-CLM-MTUS-IND-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/CLM-MTUS-IND-CD"/>
+         </reference>
+         <name value="Carrier MTUS Indicator Code"/>
+         <description value="Code indicating the units associated with services needing unit reporting on the line item for the carrier claim (non-DMERC)."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-DGNS-DRG-OUTLIER-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/DGNS-DRG-OUTLIER-CD"/>
+         </reference>
+         <name value="Claim Diagnosis Related Group Outlier Stay Code"/>
+         <description value="On an institutional claim, the code that indicates the beneficiary stay under the prospective payment system (PPS) which, although classified into a specific diagnosis related group, has an unusually long length (day outlier) or exceptionally high cost (cost outlier)."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-CLM-LINE-PRFNL-MTUS-CNT.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/CLM-LINE-PRFNL-MTUS-CNT"/>
+         </reference>
+         <name value="Claim Line MTUS Count"/>
+         <description value="The count of the total units associated with services needing unit reporting such as transportation, miles, anesthesia time units, number of services, volume of oxygen or blood units."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-CLM-LINE-RX-NUM.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/CLM-LINE-RX-NUM"/>
+         </reference>
+         <name value="Claim Line RX Number"/>
+         <description value="The number used to identify the prescription order number for drugs and biologicals purchased through the competitive acquisition program (CAP)."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-CLM-PRVDR-TAX-NUM.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/CLM-PRVDR-TAX-NUM"/>
+         </reference>
+         <name value="Claim Provider Tax Number"/>
+         <description value="Extension for expressing the tax number of a provider on a line item."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-CLM-REV-DSCNT-IND-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/CLM-REV-DSCNT-IND-CD"/>
+         </reference>
+         <name value="Claim Revenue Discount Indicator Code"/>
+         <description value="Item-level discount indicator code."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-CLM-HIPPS-UNCOMPD-CARE-AMT.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/CLM-HIPPS-UNCOMPD-CARE-AMT"/>
+         </reference>
+         <name value="Claim Uncompensated Care Payment Amount"/>
+         <description value="This field identifies the payment for disproportionate share hospitals (DSH). It represents the uncompensated care amount of the payment."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-CNTRCT-PBP-SGMT-NUM.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/CNTRCT-PBP-SGMT-NUM"/>
+         </reference>
+         <name value="Contract PBP Segment Number"/>
+         <description value="This variable is the segment number that CMS assigns to identify a geographic market segment or subdivision of a Part D plan; the segment number allows you to determine the market area covered by the plan."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-CLM-LINE-CARR-HPSA-SCRCTY-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/CLM-LINE-CARR-HPSA-SCRCTY-CD"/>
+         </reference>
+         <name value="HPSA Scarcity Code"/>
+         <description value="The code on the carrier (non-DMERC) line item that identifies the line items that have been paid a reduced fee schedule amount (65%, 75% or 85%) because a physician's assistant performed the service."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-CLM-PRCNG-LCLTY-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/CLM-PRCNG-LCLTY-CD"/>
+         </reference>
+         <name value="Line Pricing Locality Code"/>
+         <description value="Code denoting the carrier-specific locality used for pricing the service for this line item on the carrier claim (non-DMERC)."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-CLM-PRMRY-PYR-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/CLM-PRMRY-PYR-CD"/>
+         </reference>
+         <name value="Line Primary Payer Code"/>
+         <description value="The code specifying a federal non-Medicare program or other source that has primary responsibility for the payment of the Medicare beneficiary's medical bills relating to the line-item service on the non-institutional claim."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-MEDICAID-STATE-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/MEDICAID-STATE-CD"/>
+         </reference>
+         <name value="Medicaid State Code"/>
+         <description value="The USPS state code associated with the beneficiary's dual eligible status."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-BENE-MDCR-STUS-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/BENE-MDCR-STUS-CD"/>
+         </reference>
+         <name value="Medicare Beneficiary Status Code"/>
+         <description value="A code identifying the reason for a beneficiary's entitlement to Medicare benefits."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-CLM-NRLN-RIC-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/CLM-NRLN-RIC-CD"/>
+         </reference>
+         <name value="Near Line Record Identification Code"/>
+         <description value="A code defining the type of claim record being processed."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-CLM-OPRTNL-DSPRTNT-AMT.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/CLM-OPRTNL-DSPRTNT-AMT"/>
+         </reference>
+         <name value="Operating Disproportionate Share Amount"/>
+         <description value="This is one component of the total amount that is payable on prospective payment system (PPS) claims and reflects the DSH (disproportionate share hospital) payments for operating expenses (such as labor) for the claim."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-CLM-OPRTNL-IME-AMT.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/CLM-OPRTNL-IME-AMT"/>
+         </reference>
+         <name value="Operating Indirect Medical Education Amount"/>
+         <description value="This is one component of the total amount that is payable on PPS claims, and reflects the IME (indirect medical education) payments for operating expenses (such as labor) for the claim."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-CLM-PMT-80-100-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/CLM-PMT-80-100-CD"/>
+         </reference>
+         <name value="Payment Code"/>
+         <description value="The code indicating that the amount shown in the payment field on the non-institutional line item represents either 80% or 100% of the allowed charges less any deductible, or 100% limitation of liability only."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-CLM-PRCSG-IND-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/CLM-PRCSG-IND-CD"/>
+         </reference>
+         <name value="Processing Indicator Code"/>
+         <description value="The code on a non-institutional claim indicating to whom payment was made or if the claim was denied."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-CLM-RNDRG-PRVDR-PRTCPTG-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/CLM-RNDRG-PRVDR-PRTCPTG-CD"/>
+         </reference>
+         <name value="Provider Participating Indicator Code"/>
+         <description value="Code indicating whether or not a provider is participating (accepting assignment) for this line-item service on the non-institutional claim."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-CLM-PRVDR-TYPE-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/CLM-PRVDR-TYPE-CD"/>
+         </reference>
+         <name value="Provider Type Code"/>
+         <description value="Code identifying the type of provider furnishing the service for this line item on the claim. Also used for conveying supplier types."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-CLM-PHYSN-ASTNT-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/CLM-PHYSN-ASTNT-CD"/>
+         </reference>
+         <name value="Reduced Payment Physician Assistant Code"/>
+         <description value="The code on the carrier (non-DMERC) line item that identifies the line items that have been paid a reduced fee schedule amount (65%, 75% or 85%) because a physician's assistant performed the service."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-CLM-OTAF-ONE-IND-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/CLM-OTAF-ONE-IND-CD"/>
+         </reference>
+         <name value="Revenue Center Obligation to Accept As Full Payment Code"/>
+         <description value="Revenue Center Obligation to Accept As Full Payment Code"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-CLM-REV-PACKG-IND-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/CLM-REV-PACKG-IND-CD"/>
+         </reference>
+         <name value="Revenue Center Packaging Indicator Code"/>
+         <description value="The code used to identify those services that are packaged/bundled with another service."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-CLM-REV-CNTR-STUS-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/CLM-REV-CNTR-STUS-CD"/>
+         </reference>
+         <name value="Revenue Center Payment Method Indicator Code"/>
+         <description value="Extension used to provide the variable that indicates how the service listed on the revenue center record was priced for payment purposes."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-CLM-REV-PMT-MTHD-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/CLM-REV-PMT-MTHD-CD"/>
+         </reference>
+         <name value="Revenue Center Payment Method Indicator Code"/>
+         <description value="Extension used to provide the code used to identify how the service is priced for payment."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-CLM-PRVDR-SPCLTY-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/CLM-PRVDR-SPCLTY-CD"/>
+         </reference>
+         <name value="Service Deductible Code"/>
+         <description value="Switch indicating whether or not the line-item service on the non-institutional claim is subject to a deductible."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-CLM-SRVC-DDCTBL-SW.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/CLM-SRVC-DDCTBL-SW"/>
+         </reference>
+         <name value="Service Deductible Code"/>
+         <description value="Switch indicating whether or not the line-item service on the non-institutional claim is subject to a deductible."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-CLM-SUPLR-TYPE-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/CLM-SUPLR-TYPE-CD"/>
+         </reference>
+         <name value="Supplier Type Code"/>
+         <description value="The type of DMERC supplier."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-adjudication-vs.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/adjudication-vs"/>
+         </reference>
+         <name value="Adjudication Value Set"/>
+         <description value="This value set encompasses all adjudication codes used by the payer to convey their assessment of submitted claim items. It includes codes for non-covered charges, allowed amounts, provider payments, and other critical financial and administrative decisions made during the adjudication process under the patient's insurance coverage."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-clm-sbmt-frmt-cd-vs.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/clm-sbmt-frmt-cd-vs"/>
+         </reference>
+         <name value="Claim Submit Format Code Value Set"/>
+         <description value="The format of the claim as submitted by the provider."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-claim-type-vs.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/claim-type-vs"/>
+         </reference>
+         <name value="Claim Type Value Set"/>
+         <description value="A value set identifying the source and type of claim submitted through the Medicare or Medicaid program."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-supporting-info-vs.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/supporting-info-vs"/>
+         </reference>
+         <name value="Supporting Information Value Set"/>
+         <description value="This value set provides a comprehensive collection of codes used to identify and categorize various types of supporting information provided on insurance claims. This includes categories such as physical examinations, diagnoses, administrative metadata, and other relevant contexts necessary for claim adjudication."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-ANSI-GRP-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/ANSI-GRP-CD"/>
+         </reference>
+         <name value="ANSI Group Code - Claim Adjustment Group Code"/>
+         <description value="The Group Code is combined with the ANSI reason code to demonstrate who has financial responsibility for the amount."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-ANSI-RSN-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/ANSI-RSN-CD"/>
+         </reference>
+         <name value="ANSI Reason Code - Claim Adjustment Reason Code"/>
+         <description value="A code used to identify the detailed reason an adjustment was made (e.g. reason for denial or reducing payment)."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-Adjudication.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/Adjudication"/>
+         </reference>
+         <name value="Adjudication Information"/>
+         <description value="This code system includes a selection of Adjudication Value Codes which convey the payers assessment of the item provided in the claim under the terms of the patient’s insurance coverage."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-BENE-BUYIN-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/BENE-BUYIN-CD"/>
+         </reference>
+         <name value="Beneficiary Buy-in Code"/>
+         <description value="Monthly Part A and/or Part B entitlement indicator CodeSystem."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-BENE-CVRG-TYPE-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/BENE-CVRG-TYPE-CD"/>
+         </reference>
+         <name value="Beneficiary Coverage Type Code"/>
+         <description value="A code identifying the type of Medicare coverage for a beneficiary."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-BENE-DSBLD-STUS-ID.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/BENE-DSBLD-STUS-ID"/>
+         </reference>
+         <name value="Beneficiary Disabled Status Indicator"/>
+         <description value="AN IDENTIFIER INDICATING WHETHER DISABILITY IS A REASON FOR A BENEFICIARYS ENTITLEMENT TO MEDICARE."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-BENE-DUAL-STUS-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/BENE-DUAL-STUS-CD"/>
+         </reference>
+         <name value="Beneficiary Dual Status Code"/>
+         <description value="A code identifying the dual eligibility status for a beneficiary."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-BENE-DUAL-TYPE-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/BENE-DUAL-TYPE-CD"/>
+         </reference>
+         <name value="Beneficiary Dual Type Code"/>
+         <description value="A code identifying the dual eligibility type for a beneficiary."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-BENE-ESRD-STUS-ID.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/BENE-ESRD-STUS-ID"/>
+         </reference>
+         <name value="Beneficiary ESRD Status ID"/>
+         <description value="A beneficiary's ESRD Status indicator."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-BENE-ENRLMT-RSN-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/BENE-ENRLMT-RSN-CD"/>
+         </reference>
+         <name value="Beneficiary Enrollment Reason Code"/>
+         <description value="CODES AND DESCRIPTIONS THAT IDENTIFY THE REASON A BENEFICIARY ENROLLED IN A SERVICE ELECTION."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-BENE-MDCR-ENTLMT-STUS-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/BENE-MDCR-ENTLMT-STUS-CD"/>
+         </reference>
+         <name value="Beneficiary Entitlement Status Code"/>
+         <description value="The reason for entitlement or termination of a beneficiary's benefits during a period of coverage."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-BENE-LIS-COPMT-LVL-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/BENE-LIS-COPMT-LVL-CD"/>
+         </reference>
+         <name value="Beneficiary LIS Copayment Level Code"/>
+         <description value="Codes indicating the copayment level for Low Income Subsidy (LIS) beneficiaries"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-BENE-LIS-EFCTV-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/BENE-LIS-EFCTV-CD"/>
+         </reference>
+         <name value="Beneficiary LIS Effective Code"/>
+         <description value="Codes indicating the effective status of Low Income Subsidy (LIS) for a beneficiary"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-BENE-MDCR-ENTLMT-RSN-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/BENE-MDCR-ENTLMT-RSN-CD"/>
+         </reference>
+         <name value="Beneficiary Medicare Entitlement Reason Code"/>
+         <description value="The reason for a beneficiary's entitlement to Medicare."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-BENE-MDCR-STUS-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/BENE-MDCR-STUS-CD"/>
+         </reference>
+         <name value="Beneficiary Medicare Status Code"/>
+         <description value="A code identifying the reason for a beneficiary's entitlement to Medicare benefits."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-BENE-PTNT-STUS-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/BENE-PTNT-STUS-CD"/>
+         </reference>
+         <name value="Beneficiary Patient Status Code"/>
+         <description value="Indicates the patient’s discharge status as of the Claim Through Date"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-BENE-ENRLMT-EMPLR-SBSDY-SW.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/BENE-ENRLMT-EMPLR-SBSDY-SW"/>
+         </reference>
+         <name value="Beneficiary Retiree Drug Subsidy Switch"/>
+         <description value="A switch indicating enrollment by a beneficiary who has an employer subsidy."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-BRND-GNRC-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-BRND-GNRC-CD"/>
+         </reference>
+         <name value="Brand Generic Code"/>
+         <description value="This field indicates whether the drug is a brand or generic."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-MDCR-PRFNL-PRVDR-ASGNMT-SW.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-MDCR-PRFNL-PRVDR-ASGNMT-SW"/>
+         </reference>
+         <name value="Carrier Claim Provider Assignment Indicator Switch"/>
+         <description value="Variable indicates whether or not the provider accepts assignment for the non-institutional claim."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-LINE-CARR-HPSA-SCRCTY-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-LINE-CARR-HPSA-SCRCTY-CD"/>
+         </reference>
+         <name value="Carrier Line Health Professional Shortage Area (HPSA)/Scarcity Indicator Code"/>
+         <description value="The code used to track health professional shortage area (HPSA) and physician scarcity bonus payments on carrier claims."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-MTUS-IND-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-MTUS-IND-CD"/>
+         </reference>
+         <name value="Carrier Line Miles/Time/Units/Services (MTUS) Indicator Code"/>
+         <description value="Code indicating the units associated with services needing unit reporting on the line item for the carrier claim (non-DMERC)."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-PHYSN-ASTNT-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-PHYSN-ASTNT-CD"/>
+         </reference>
+         <name value="Carrier Line Reduced Payment Physician Assistant Code"/>
+         <description value="The code on the carrier (non-DMERC) line item that identifies the line items that have been paid a reduced fee schedule amount (65%, 75% or 85%) because a physician's assistant performed the service."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-PRVDR-TYPE-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-PRVDR-TYPE-CD"/>
+         </reference>
+         <name value="Carrier Provider Type Code"/>
+         <description value="Code identifying the type of provider or supplier furnishing the service for this line item on the carrier claim. Also used for conveying supplier types."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-CTSTRPHC-CVRG-IND-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-CTSTRPHC-CVRG-IND-CD"/>
+         </reference>
+         <name value="Catastrophic Coverage Code"/>
+         <description value="This variable indicates whether the PDE occurred within the catastrophic benefit phase of the Medicare Part D benefit, according to the source PDE.&#xA;&#xA;When the value equals C (above attachment point), then the PDE is in the catastrophic phase. When the value equals A (attachment point), the PDE has caused the beneficiary to move into the catastrophic phase (i.e., this is the 'triggering' PDE)."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-Adjudication-Status.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/Adjudication-Status"/>
+         </reference>
+         <name value="Claim Adjudication Status"/>
+         <description value="Tag codes indicating whether or not a claim has been fully adjudicated. More specifically, whether or not a claim has been released to the National Claims History."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-ADJSTMT-TYPE-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-ADJSTMT-TYPE-CD"/>
+         </reference>
+         <name value="Claim Adjustment Type Code"/>
+         <description value="DOMAIN OF CLAIM ADJUSTMENT TYPES, INCLUDING DENOTING ORIGINAL CLAIMS"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-ADMSN-SRC-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-ADMSN-SRC-CD"/>
+         </reference>
+         <name value="Claim Admission Source Code"/>
+         <description value="Indicates the source of the beneficiary’s referral for admission or visit."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-ADMSN-TYPE-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-ADMSN-TYPE-CD"/>
+         </reference>
+         <name value="Claim Admission Type Code"/>
+         <description value="Indicates the type and priority of inpatient services."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-BNFT-ENHNCMT-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-BNFT-ENHNCMT-CD"/>
+         </reference>
+         <name value="Claim Benefit Enhancement Code"/>
+         <description value="Claim Benefit Enhancement Codes"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-BNFT-ENHNCMT-CD-SWITCH.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-BNFT-ENHNCMT-CD-SWITCH"/>
+         </reference>
+         <name value="Claim Benefit Enhancement Code Switch"/>
+         <description value="Claim Benefit Enhancement Code Switch."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-BILL-CLSFCTN-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-BILL-CLSFCTN-CD"/>
+         </reference>
+         <name value="Claim Bill Classification Code"/>
+         <description value="The second digit of the type of bill (TOB2) is used to indicate with greater specificity where the service was provided (e.g., a department within a hospital). In FHIR, CMS concatenates the first and second digits."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-BILL-FAC-TYPE-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-BILL-FAC-TYPE-CD"/>
+         </reference>
+         <name value="Claim Bill Facility Type Code"/>
+         <description value="The first digit of the type of bill (TOB1) is used to identify the type of facility that provided care to the beneficiary (e.g., hospital or SNF)."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-BILL-FREQ-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-BILL-FREQ-CD"/>
+         </reference>
+         <name value="Claim Bill Frequency Code"/>
+         <description value="It indicates the sequence of the claim in the beneficiary's current episode of care (e.g., interim or voided)."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-CNTRCTR-NUM.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-CNTRCTR-NUM"/>
+         </reference>
+         <name value="Claim Contractor Number"/>
+         <description value="A number assigned by CMS identifying a MAC authorized to process Medicare claims."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-DDCTBL-COINSRNC-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-DDCTBL-COINSRNC-CD"/>
+         </reference>
+         <name value="Claim Deductible Coinsurance Code"/>
+         <description value="CODE INDICATING WHETHER THE REVENUE CENTER CHARGES ARE SUBJECT TO DEDUCTIBLE AND/OR COINSURANCE."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-DGNS-DRG-OUTLIER-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/DGNS-DRG-OUTLIER-CD"/>
+         </reference>
+         <name value="Claim Diagnosis Related Group Outlier Stay Code"/>
+         <description value="On an institutional claim, the code that indicates the beneficiary stay under the prospective payment system (PPS) which, although classified into a specific diagnosis related group, has an unusually long length (day outlier) or exceptionally high cost (cost outlier)."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-DSPNSNG-STUS-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-DSPNSNG-STUS-CD"/>
+         </reference>
+         <name value="Claim Dispensing Status Code"/>
+         <description value="Indicates the status of prescription fulfillment."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-DISP-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-DISP-CD"/>
+         </reference>
+         <name value="Claim Disposition Code"/>
+         <description value="Code indicating the disposition or outcome of the processing of the claim record."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-FI-ACTN-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-FI-ACTN-CD"/>
+         </reference>
+         <name value="Claim Fiscal Intermediary Action Code"/>
+         <description value="The type of action requested by the intermediary to be taken on an institutional claim."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-HHA-LUP-IND-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-HHA-LUP-IND-CD"/>
+         </reference>
+         <name value="Claim Lupa Indicator Code"/>
+         <description value="The code used to identify those Home Health PPS claims that have 4 visits or less in a 60-day episode."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-NRLN-RIC-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-NRLN-RIC-CD"/>
+         </reference>
+         <name value="Claim Near Line Record Identification Code"/>
+         <description value="A CODE IDENTIFYING THE CLAIM RECORD TYPE BEING PROCESSED."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-MDCR-NPMT-RSN-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-MDCR-NPMT-RSN-CD"/>
+         </reference>
+         <name value="Claim Nonpayment Reason Code"/>
+         <description value="THE REASON THAT NO MEDICARE PAYMENT IS MADE FOR SERVICES ON AN INSTITUTIONAL CLAIM."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-OTAF-IND-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-OTAF-IND-CD"/>
+         </reference>
+         <name value="Claim OTAF Indicator Code"/>
+         <description value="THE DOMAIN OF OTAF INDICATOR CODES"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-OP-SRVC-TYPE-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-OP-SRVC-TYPE-CD"/>
+         </reference>
+         <name value="Claim Outpatient Service Type Code"/>
+         <description value="A code reported by the provider that indicates the specific type of claim"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-PPS-IND-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-PPS-IND-CD"/>
+         </reference>
+         <name value="Claim PPS Indicator Code"/>
+         <description value="The code indicating whether or not: (1) the claim is from the prospective payment system (PPS), and/or (2) the beneficiary is a deemed insured MQGE (Medicare Qualified Government Employee)"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-PD-STUS-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-PD-STUS-CD"/>
+         </reference>
+         <name value="Claim Paid Status Code"/>
+         <description value="A PAYMENT STATUS OF A CLAIM."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-CARR-PMT-DNL-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-CARR-PMT-DNL-CD"/>
+         </reference>
+         <name value="Claim Payment Denial Code"/>
+         <description value="The code on a non-institutional claim indicating who receives payment or if the claim was denied."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-POS-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-POS-CD"/>
+         </reference>
+         <name value="Claim Place of Service Code"/>
+         <description value="The code indicating the place of service, as defined in the Medicare Carrier Manual, for this line item on the non-institutional claim."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-QUERY-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-QUERY-CD"/>
+         </reference>
+         <name value="Claim Query Code"/>
+         <description value="Code indicating the type of claim record being processed with respect to payment (debit/credit indicator; interim/final indicator)."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-HHA-RFRL-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-HHA-RFRL-CD"/>
+         </reference>
+         <name value="Claim Referral Code"/>
+         <description value="The code used to identify those Home Health PPS claims that have 4 visits or less in a 60-day episode."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-RLT-COND-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-RLT-COND-CD"/>
+         </reference>
+         <name value="Claim Related Condition Code"/>
+         <description value="This code indicates information about how a claim should be processed."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-REV-CNTR-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-REV-CNTR-CD"/>
+         </reference>
+         <name value="Claim Revenue Center Code"/>
+         <description value="Domain of Revenue Center Codes"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-REV-PACKG-IND-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-REV-PACKG-IND-CD"/>
+         </reference>
+         <name value="Claim Revenue Center Packaging Indicator Code"/>
+         <description value="THE DOMAIN OF CLAIM REVENUE PACKAGE INDICATOR CODES."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-REV-DSCNT-IND-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-REV-DSCNT-IND-CD"/>
+         </reference>
+         <name value="Claim Revenue Discount Indicator Code"/>
+         <description value="THE DOMAIN OF CLAIM REVENUE DISCOUNT INDICATOR CODES."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-SRC-ID.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-SRC-ID"/>
+         </reference>
+         <name value="Claim Source ID"/>
+         <description value="AN IDENTIFIER INDICATING WHERE THE SOURCE OF THE CLAIM DATA IN THE INTEGRATED DATA REPOSITORY (IDR) ORIGINATED FROM."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-AUDT-TRL-STUS-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-AUDT-TRL-STUS-CD"/>
+         </reference>
+         <name value="Claim Status Code"/>
+         <description value="The current status information for the pending and paid claims currently in the system. Augmented to derive using system type + location code + status code."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-SBMT-FRMT-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-SBMT-FRMT-CD"/>
+         </reference>
+         <name value="Claim Submission Format Code"/>
+         <description value="Code system for claim submission format codes indicating the method or format used to submit the claim."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-SUPLR-TYPE-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-SUPLR-TYPE-CD"/>
+         </reference>
+         <name value="Claim Supplier Type Code"/>
+         <description value="THE DOMAIN OF CLAIM SUPPLIER TYPE CODES."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-TYPE-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-TYPE-CD"/>
+         </reference>
+         <name value="Claim Type Code"/>
+         <description value="CA CODE IDENTIFYING THE SOURCE AND TYPE OF CLAIM SUBMITTED THROUGH THE MEDICARE OR MEDICAID PROGRAM."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-CMPND-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-CMPND-CD"/>
+         </reference>
+         <name value="Compound Code"/>
+         <description value="This field indicates whether or not the dispensed drug was compounded or mixed."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-DAW-PROD-SLCTN-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-DAW-PROD-SLCTN-CD"/>
+         </reference>
+         <name value="Dispense as Written Selection Code."/>
+         <description value="Indicates the prescriber's instructions regarding generic substitution or how those instructions were followed"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-DRUG-CVRG-STUS-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-DRUG-CVRG-STUS-CD"/>
+         </reference>
+         <name value="Drug Coverage Status Code"/>
+         <description value="This field indicates whether or not the drug is covered by Medicare Part D. The Part D benefit does not cover all FDA-approved drugs. However, plan sponsors can offer an 'enhanced' benefit package that covers non-Part D drugs, such as over-the-counter medications."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-Final-Action.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/Final-Action"/>
+         </reference>
+         <name value="Final Action"/>
+         <description value="Tag codes indicating whether or not a claim has been marked as final action."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-HCT-HGB-TYPE-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/HCT-HGB-TYPE-CD"/>
+         </reference>
+         <name value="Hematocrit / Hemoglobin Test Type Code"/>
+         <description value="The type of test that was performed - hematocrit or hemoglobin."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-FED-TYPE-SRVC-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-FED-TYPE-SRVC-CD"/>
+         </reference>
+         <name value="Line CMS Type Service Code"/>
+         <description value="Code indicating the type of service, as defined in the CMS Medicare carrier manual, for this line item on the non-institutional claim."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-PMT-80-100-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-PMT-80-100-CD"/>
+         </reference>
+         <name value="Line Payment 80%/100% Code"/>
+         <description value="The code indicating that the amount shown in the payment field on the non-institutional line item represents either 80% or 100% of the allowed charges less any deductible, or 100% limitation of liability only."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-PRCNG-LCLTY-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-PRCNG-LCLTY-CD"/>
+         </reference>
+         <name value="Line Pricing Locality Code"/>
+         <description value="Code denoting the carrier-specific locality used for pricing the service for this line item on the carrier claim (non-DMERC)."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-PRMRY-PYR-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-PRMRY-PYR-CD"/>
+         </reference>
+         <name value="Line Primary Payer Code (if not Medicare)"/>
+         <description value="The code specifying a federal non-Medicare program or other source that has primary responsibility for the payment of the Medicare beneficiary's medical bills relating to the line item service on the non-institutional claim."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-MDCR-INSTNL-MCO-PD-SW.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-MDCR-INSTNL-MCO-PD-SW"/>
+         </reference>
+         <name value="Medicare MCO Paid Switch"/>
+         <description value="A SWITCH INDICATING WHETHER OR NOT A MANAGED CARE ORGANIZATION (MCO) HAS PAID THE PROVIDER FOR AN INSTITUTIONAL CLAIM."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-NCH-PRMRY-PYR-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-NCH-PRMRY-PYR-CD"/>
+         </reference>
+         <name value="NCH Primary Payer Code"/>
+         <description value="A CODE IDENTIFYING THE COVERAGE TYPE OF THE PRIMARY PAYER WHEN MEDICARE IS THE SECONDARY PAYER AS DEFINED BY THE COMMON WORKING FILE (CWF)."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-PTNT-RSDNC-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-PTNT-RSDNC-CD"/>
+         </reference>
+         <name value="Patient Residence Code"/>
+         <description value="This variable indicates where the beneficiary lived when the prescription was filled, as reported on the PDE record. CMS requires Part D plans to maintain pharmacy networks that are sufficient to ensure convenient access to Medicare beneficiaries – including retail, home infusion, and long-term care pharmacies. This variable is designed to help CMS and plan sponsors monitor beneficiary access to a range of 'in-network' pharmacies."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-MDCR-NCH-PTNT-STUS-IND-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-MDCR-NCH-PTNT-STUS-IND-CD"/>
+         </reference>
+         <name value="Patient Status Indicator Code"/>
+         <description value="EFFECTIVE WITH NCH VERSION H, THE CODE ON AN INPATIENT/SNF AND HOSPICE CLAIM, INDICATING WHETHER THE BENEFICIARY WAS DISCHARGED, DIED OR STILL A PATIENT (USED FOR INTERNAL CWFMQA EDITING PURPOSES.)"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-PHRMCY-SRVC-TYPE-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-PHRMCY-SRVC-TYPE-CD"/>
+         </reference>
+         <name value="Pharmacy service type code"/>
+         <description value="The type of pharmacy used. This variable indicates the type of pharmacy that dispensed the prescription, as recorded on the PDE. CMS requires Part D plans to maintain pharmacy networks that are sufficient to ensure access to Medicare beneficiaries – including retail, home infusion, and long-term care pharmacies. Plan sponsors have contracts with pharmacies to provide 'in-network' services."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-LINE-RX-ORGN-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-LINE-RX-ORGN-CD"/>
+         </reference>
+         <name value="Prescription Origination Code"/>
+         <description value="This variable indicates whether the prescription was transmitted as an electronic prescription, by phone, by fax, or as a written paper copy."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-PRCSG-IND-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-PRCSG-IND-CD"/>
+         </reference>
+         <name value="Processing Indicator Code"/>
+         <description value="The code on a non-institutional claim indicating to whom payment was made or if the claim was denied."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-PRVDR-ID-QLFYR-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/PRVDR-ID-QLFYR-CD"/>
+         </reference>
+         <name value="Provider ID Qualifier Code"/>
+         <description value="Indicates the type of number used to identify the provider."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-RNDRG-PRVDR-PRTCPTG-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-RNDRG-PRVDR-PRTCPTG-CD"/>
+         </reference>
+         <name value="Provider Participating Indicator Code"/>
+         <description value="Code indicating whether or not a provider is participating (accepting assignment) for this line-item service on the non-institutional claim."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-PRVDR-SPCLTY-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-PRVDR-SPCLTY-CD"/>
+         </reference>
+         <name value="Provider Speciality Code"/>
+         <description value="CMS (previously called HCFA) specialty code used for pricing the line-item service on the non-institutional claim."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-REV-PMT-MTHD-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-REV-PMT-MTHD-CD"/>
+         </reference>
+         <name value="Revenue Center Payment Method Indicator Code"/>
+         <description value="THE DOMAIN OF CLAIM PAYMENT METHOD CODES."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-REV-CNTR-STUS-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-REV-CNTR-STUS-CD"/>
+         </reference>
+         <name value="Revenue Center Status Code"/>
+         <description value="THE DOMAIN OF CLAIM REVENUE CENTER STATUS CODES."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-SRVC-DDCTBL-SW.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-SRVC-DDCTBL-SW"/>
+         </reference>
+         <name value="Service Deductible Code"/>
+         <description value="Switch indicating whether or not the line-item service on the non-institutional claim is subject to a deductible."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-System-Type.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/System-Type"/>
+         </reference>
+         <name value="Source System Type"/>
+         <description value="Tag codes indicating whether or not a claim comes from a CMS Shared System or the CMS National Claims History."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CLM-LTC-DSPNSNG-MTHD-CD.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CLM-LTC-DSPNSNG-MTHD-CD"/>
+         </reference>
+         <name value="Submission clarification code"/>
+         <description value="For beneficiaries living in long-term care (LTC) facilities, this variable indicates how many days' supply of the medication was dispensed by the long-term care pharmacy and provides some details about the dispensing event.&#xA;&#xA;This variable is only populated when beneficiary lives in an LTC facility (i.e., when the CLM_PTNT_RSDNC_CD variable equals 03)"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-Supporting-Information.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/Supporting-Information"/>
+         </reference>
+         <name value="Supporting Information"/>
+         <description value="A selection of codes that provide supporting information about the claim."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <page>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="toc.html"/>
+         </extension>
+         <nameUrl value="toc.html"/>
+         <title value="Table of Contents"/>
+         <generation value="html"/>
+         <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+               <valueUrl value="index.html"/>
+            </extension>
+            <nameUrl value="index.html"/>
+            <title value="Home"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <nameUrl value="artifacts.html"/>
+            <title value="Artifacts Summary"/>
+            <generation value="html"/>
+            <page>
+               <nameUrl value="StructureDefinition-BFD-EOB-Pharmacy.html"/>
+               <title value="BFD EOB Pharmacy Profile"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-CLM-LINE-ANSTHSA-UNIT-CNT.html"/>
+               <title value="Anesthesia Unit Count"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-BENE-BUYIN-CD.html"/>
+               <title value="Beneficiary Buy-in Indicator"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-BENE-CNTRCT-NUM.html"/>
+               <title value="Beneficiary Contract Number"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-BENE-CVRG-TYPE-CD.html"/>
+               <title value="Beneficiary Coverage Type Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-BENE-DSBLD-STUS-ID.html"/>
+               <title value="Beneficiary Disabled Status Indicator Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-BENE-DUAL-STUS-CD.html"/>
+               <title value="Beneficiary Dual Status Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-BENE-DUAL-TYPE-CD.html"/>
+               <title value="Beneficiary Dual Type Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-BENE-ENRLMT-RSN-CD.html"/>
+               <title value="Beneficiary Enrollment Reason Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-BENE-MDCR-ENTLMT-RSN-CD.html"/>
+               <title value="Beneficiary Entitlement Reason Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-BENE-MDCR-ENTLMT-STUS-CD.html"/>
+               <title value="Beneficiary Entitlement Status Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-BENE-ESRD-STUS-ID.html"/>
+               <title value="Beneficiary ESRD Status Indicator Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-BENE-LIS-COPMT-LVL-CD.html"/>
+               <title value="Beneficiary LIS Copayment Level Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-BENE-LIS-EFCTV-CD.html"/>
+               <title value="Beneficiary LIS Effective Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-BENE-LIS-PTD-PRM-PCT.html"/>
+               <title value="Beneficiary LIS Part D Premium Percentage"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-BENE-PBP-NUM.html"/>
+               <title value="Beneficiary PBP Number"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-BENE-ENRLMT-EMPLR-SBSDY-SW.html"/>
+               <title value="Beneficiary Retiree Drug Subsidy Switch"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-CLM-MTUS-IND-CD.html"/>
+               <title value="Carrier MTUS Indicator Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-DGNS-DRG-OUTLIER-CD.html"/>
+               <title value="Claim Diagnosis Related Group Outlier Stay Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-CLM-LINE-PRFNL-MTUS-CNT.html"/>
+               <title value="Claim Line MTUS Count"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-CLM-LINE-RX-NUM.html"/>
+               <title value="Claim Line RX Number"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-CLM-PRVDR-TAX-NUM.html"/>
+               <title value="Claim Provider Tax Number"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-CLM-REV-DSCNT-IND-CD.html"/>
+               <title value="Claim Revenue Discount Indicator Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-CLM-HIPPS-UNCOMPD-CARE-AMT.html"/>
+               <title value="Claim Uncompensated Care Payment Amount"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-CLM-FED-TYPE-SRVC-CD.html"/>
+               <title value="CMS Service Type Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-CNTRCT-PBP-SGMT-NUM.html"/>
+               <title value="Contract PBP Segment Number"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-CLM-LINE-CARR-HPSA-SCRCTY-CD.html"/>
+               <title value="HPSA Scarcity Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-CLM-PRCNG-LCLTY-CD.html"/>
+               <title value="Line Pricing Locality Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-CLM-PRMRY-PYR-CD.html"/>
+               <title value="Line Primary Payer Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-MEDICAID-STATE-CD.html"/>
+               <title value="Medicaid State Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-BENE-MDCR-STUS-CD.html"/>
+               <title value="Medicare Beneficiary Status Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-CLM-NRLN-RIC-CD.html"/>
+               <title value="Near Line Record Identification Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-CLM-OPRTNL-DSPRTNT-AMT.html"/>
+               <title value="Operating Disproportionate Share Amount"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-CLM-OPRTNL-IME-AMT.html"/>
+               <title value="Operating Indirect Medical Education Amount"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-CLM-PMT-80-100-CD.html"/>
+               <title value="Payment Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-CLM-PRCSG-IND-CD.html"/>
+               <title value="Processing Indicator Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-CLM-RNDRG-PRVDR-PRTCPTG-CD.html"/>
+               <title value="Provider Participating Indicator Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-CLM-PRVDR-TYPE-CD.html"/>
+               <title value="Provider Type Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-CLM-PHYSN-ASTNT-CD.html"/>
+               <title value="Reduced Payment Physician Assistant Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-CLM-OTAF-ONE-IND-CD.html"/>
+               <title value="Revenue Center Obligation to Accept As Full Payment Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-CLM-REV-PACKG-IND-CD.html"/>
+               <title value="Revenue Center Packaging Indicator Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-CLM-REV-CNTR-STUS-CD.html"/>
+               <title value="Revenue Center Payment Method Indicator Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-CLM-REV-PMT-MTHD-CD.html"/>
+               <title value="Revenue Center Payment Method Indicator Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-CLM-PRVDR-SPCLTY-CD.html"/>
+               <title value="Service Deductible Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-CLM-SRVC-DDCTBL-SW.html"/>
+               <title value="Service Deductible Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-CLM-SUPLR-TYPE-CD.html"/>
+               <title value="Supplier Type Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-adjudication-vs.html"/>
+               <title value="Adjudication Value Set"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-clm-sbmt-frmt-cd-vs.html"/>
+               <title value="Claim Submit Format Code Value Set"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-claim-type-vs.html"/>
+               <title value="Claim Type Value Set"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-supporting-info-vs.html"/>
+               <title value="Supporting Information Value Set"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-Adjudication.html"/>
+               <title value="Adjudication Information"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-ANSI-GRP-CD.html"/>
+               <title value="ANSI Group Code - Claim Adjustment Group Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-ANSI-RSN-CD.html"/>
+               <title value="ANSI Reason Code - Claim Adjustment Reason Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-BENE-BUYIN-CD.html"/>
+               <title value="Beneficiary Buy-in Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-BENE-CVRG-TYPE-CD.html"/>
+               <title value="Beneficiary Coverage Type Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-BENE-DSBLD-STUS-ID.html"/>
+               <title value="Beneficiary Disabled Status Indicator"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-BENE-DUAL-STUS-CD.html"/>
+               <title value="Beneficiary Dual Status Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-BENE-DUAL-TYPE-CD.html"/>
+               <title value="Beneficiary Dual Type Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-BENE-ENRLMT-RSN-CD.html"/>
+               <title value="Beneficiary Enrollment Reason Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-BENE-MDCR-ENTLMT-STUS-CD.html"/>
+               <title value="Beneficiary Entitlement Status Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-BENE-ESRD-STUS-ID.html"/>
+               <title value="Beneficiary ESRD Status ID"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-BENE-LIS-COPMT-LVL-CD.html"/>
+               <title value="Beneficiary LIS Copayment Level Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-BENE-LIS-EFCTV-CD.html"/>
+               <title value="Beneficiary LIS Effective Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-BENE-MDCR-ENTLMT-RSN-CD.html"/>
+               <title value="Beneficiary Medicare Entitlement Reason Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-BENE-MDCR-STUS-CD.html"/>
+               <title value="Beneficiary Medicare Status Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-BENE-PTNT-STUS-CD.html"/>
+               <title value="Beneficiary Patient Status Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-BENE-ENRLMT-EMPLR-SBSDY-SW.html"/>
+               <title value="Beneficiary Retiree Drug Subsidy Switch"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-BRND-GNRC-CD.html"/>
+               <title value="Brand Generic Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-MDCR-PRFNL-PRVDR-ASGNMT-SW.html"/>
+               <title value="Carrier Claim Provider Assignment Indicator Switch"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-LINE-CARR-HPSA-SCRCTY-CD.html"/>
+               <title value="Carrier Line Health Professional Shortage Area (HPSA)/Scarcity Indicator Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-MTUS-IND-CD.html"/>
+               <title value="Carrier Line Miles/Time/Units/Services (MTUS) Indicator Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-PHYSN-ASTNT-CD.html"/>
+               <title value="Carrier Line Reduced Payment Physician Assistant Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-PRVDR-TYPE-CD.html"/>
+               <title value="Carrier Provider Type Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-CTSTRPHC-CVRG-IND-CD.html"/>
+               <title value="Catastrophic Coverage Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-Adjudication-Status.html"/>
+               <title value="Claim Adjudication Status"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-ADJSTMT-TYPE-CD.html"/>
+               <title value="Claim Adjustment Type Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-ADMSN-SRC-CD.html"/>
+               <title value="Claim Admission Source Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-ADMSN-TYPE-CD.html"/>
+               <title value="Claim Admission Type Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-BNFT-ENHNCMT-CD.html"/>
+               <title value="Claim Benefit Enhancement Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-BNFT-ENHNCMT-CD-SWITCH.html"/>
+               <title value="Claim Benefit Enhancement Code Switch"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-BILL-CLSFCTN-CD.html"/>
+               <title value="Claim Bill Classification Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-BILL-FAC-TYPE-CD.html"/>
+               <title value="Claim Bill Facility Type Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-BILL-FREQ-CD.html"/>
+               <title value="Claim Bill Frequency Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-CNTRCTR-NUM.html"/>
+               <title value="Claim Contractor Number"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-DDCTBL-COINSRNC-CD.html"/>
+               <title value="Claim Deductible Coinsurance Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-DGNS-DRG-OUTLIER-CD.html"/>
+               <title value="Claim Diagnosis Related Group Outlier Stay Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-DSPNSNG-STUS-CD.html"/>
+               <title value="Claim Dispensing Status Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-DISP-CD.html"/>
+               <title value="Claim Disposition Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-FI-ACTN-CD.html"/>
+               <title value="Claim Fiscal Intermediary Action Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-HHA-LUP-IND-CD.html"/>
+               <title value="Claim Lupa Indicator Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-NRLN-RIC-CD.html"/>
+               <title value="Claim Near Line Record Identification Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-MDCR-NPMT-RSN-CD.html"/>
+               <title value="Claim Nonpayment Reason Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-OTAF-IND-CD.html"/>
+               <title value="Claim OTAF Indicator Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-OP-SRVC-TYPE-CD.html"/>
+               <title value="Claim Outpatient Service Type Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-PD-STUS-CD.html"/>
+               <title value="Claim Paid Status Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-CARR-PMT-DNL-CD.html"/>
+               <title value="Claim Payment Denial Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-POS-CD.html"/>
+               <title value="Claim Place of Service Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-PPS-IND-CD.html"/>
+               <title value="Claim PPS Indicator Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-QUERY-CD.html"/>
+               <title value="Claim Query Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-HHA-RFRL-CD.html"/>
+               <title value="Claim Referral Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-RLT-COND-CD.html"/>
+               <title value="Claim Related Condition Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-REV-CNTR-CD.html"/>
+               <title value="Claim Revenue Center Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-REV-PACKG-IND-CD.html"/>
+               <title value="Claim Revenue Center Packaging Indicator Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-REV-DSCNT-IND-CD.html"/>
+               <title value="Claim Revenue Discount Indicator Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-SRC-ID.html"/>
+               <title value="Claim Source ID"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-AUDT-TRL-STUS-CD.html"/>
+               <title value="Claim Status Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-SBMT-FRMT-CD.html"/>
+               <title value="Claim Submission Format Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-SUPLR-TYPE-CD.html"/>
+               <title value="Claim Supplier Type Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-TYPE-CD.html"/>
+               <title value="Claim Type Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-CMPND-CD.html"/>
+               <title value="Compound Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-DAW-PROD-SLCTN-CD.html"/>
+               <title value="Dispense as Written Selection Code."/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-DRUG-CVRG-STUS-CD.html"/>
+               <title value="Drug Coverage Status Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-Final-Action.html"/>
+               <title value="Final Action"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-HCT-HGB-TYPE-CD.html"/>
+               <title value="Hematocrit / Hemoglobin Test Type Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-FED-TYPE-SRVC-CD.html"/>
+               <title value="Line CMS Type Service Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-PMT-80-100-CD.html"/>
+               <title value="Line Payment 80%/100% Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-PRCNG-LCLTY-CD.html"/>
+               <title value="Line Pricing Locality Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-PRMRY-PYR-CD.html"/>
+               <title value="Line Primary Payer Code (if not Medicare)"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-MDCR-INSTNL-MCO-PD-SW.html"/>
+               <title value="Medicare MCO Paid Switch"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-NCH-PRMRY-PYR-CD.html"/>
+               <title value="NCH Primary Payer Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-PTNT-RSDNC-CD.html"/>
+               <title value="Patient Residence Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-MDCR-NCH-PTNT-STUS-IND-CD.html"/>
+               <title value="Patient Status Indicator Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-PHRMCY-SRVC-TYPE-CD.html"/>
+               <title value="Pharmacy service type code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-LINE-RX-ORGN-CD.html"/>
+               <title value="Prescription Origination Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-PRCSG-IND-CD.html"/>
+               <title value="Processing Indicator Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-PRVDR-ID-QLFYR-CD.html"/>
+               <title value="Provider ID Qualifier Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-RNDRG-PRVDR-PRTCPTG-CD.html"/>
+               <title value="Provider Participating Indicator Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-PRVDR-SPCLTY-CD.html"/>
+               <title value="Provider Speciality Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-REV-PMT-MTHD-CD.html"/>
+               <title value="Revenue Center Payment Method Indicator Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-REV-CNTR-STUS-CD.html"/>
+               <title value="Revenue Center Status Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-SRVC-DDCTBL-SW.html"/>
+               <title value="Service Deductible Code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-System-Type.html"/>
+               <title value="Source System Type"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CLM-LTC-DSPNSNG-MTHD-CD.html"/>
+               <title value="Submission clarification code"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-Supporting-Information.html"/>
+               <title value="Supporting Information"/>
+               <generation value="generated"/>
+            </page>
+         </page>
+      </page>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/capabilities"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/examples"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/extensions"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/models"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/operations"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/profiles"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/resources"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/vocabulary"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/maps"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/testing"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/history"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="fsh-generated/resources"/>
+      </parameter>
+      <parameter>
+         <code value="path-pages"/>
+         <value value="template/config"/>
+      </parameter>
+      <parameter>
+         <code value="path-pages"/>
+         <value value="input/images"/>
+      </parameter>
+      <parameter>
+         <code value="path-tx-cache"/>
+         <value value="input-cache/txcache"/>
+      </parameter>
+      <parameter>
+         <code value="copyrightyear"/>
+         <value value="2024+"/>
+      </parameter>
+      <parameter>
+         <code value="releaselabel"/>
+         <value value="ci-build"/>
+      </parameter>
+      <parameter>
+         <code value="autoload-resources"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="path-liquid"/>
+         <value value="template/liquid"/>
+      </parameter>
+      <parameter>
+         <code value="path-liquid"/>
+         <value value="input/liquid"/>
+      </parameter>
+      <parameter>
+         <code value="path-qa"/>
+         <value value="temp/qa"/>
+      </parameter>
+      <parameter>
+         <code value="path-temp"/>
+         <value value="temp/pages"/>
+      </parameter>
+      <parameter>
+         <code value="path-output"/>
+         <value value="output"/>
+      </parameter>
+      <parameter>
+         <code value="path-suppressed-warnings"/>
+         <value value="input/ignoreWarnings.txt"/>
+      </parameter>
+      <parameter>
+         <code value="path-history"/>
+         <value value="https://bluebutton.cms.gov/fhir/history.html"/>
+      </parameter>
+      <parameter>
+         <code value="template-html"/>
+         <value value="template-page.html"/>
+      </parameter>
+      <parameter>
+         <code value="template-md"/>
+         <value value="template-page-md.html"/>
+      </parameter>
+      <parameter>
+         <code value="apply-contact"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-context"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-copyright"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-jurisdiction"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-license"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-publisher"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-version"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-wg"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="active-tables"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="fmm-definition"/>
+         <value value="http://hl7.org/fhir/versions.html#maturity"/>
+      </parameter>
+      <parameter>
+         <code value="propagate-status"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="excludelogbinaryformat"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="tabbed-snapshots"/>
+         <value value="true"/>
+      </parameter>
+   </definition>
+</ImplementationGuide>
