@@ -1,0 +1,51 @@
+name: Deploy IG to GitHub Pages
+
+on:
+  push:
+    branches: [ main ] # Trigger on push to main branch
+    paths:
+      - 'apps/bfd-model-idr/sushi/**' # Only run when IG files change
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby (for Jekyll)
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+
+      - name: Setup Java (for IG Publisher)
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Install SUSHI
+        run: npm install -g fsh-sushi
+
+      - name: Build IG
+        working-directory: ./apps/bfd-model-idr/sushi
+        run: |
+          ./_updatePublisher.sh # Download publisher if needed
+          ./_genonce.sh         # Run full build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./apps/bfd-model-idr/sushi/output
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,7 @@
+== Suppressed Messages ==
+
+# Reason: Known issue with the IG publisher's automated comparison against US Core.
+%The html source does not contain the publish box; this is recommended for publishing support%
+
+# Reason: Suppression of the suppressed messages file format warning.
+%Supressed messages file is not using the new format%

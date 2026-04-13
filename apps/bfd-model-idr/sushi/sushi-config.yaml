@@ -1,3 +1,21 @@
-FSHOnly: true
+id: bfd
+name: BFD
+title: BFD Model Implementation Guide
+publisher: CMS Blue Button
+status: active
+version: 0.1.0
+releaseLabel: ci-build
+copyrightYear: 2024+
 fhirVersion: 4.0.1
 canonical: https://bluebutton.cms.gov/fhir
+
+# If true, SUSHI will only generate JSON resources. 
+# Set to false to generate the full IG structure.
+FSHOnly: false
+
+dependencies:
+  hl7.fhir.us.carin-bb: 2.1.0
+
+
+
+

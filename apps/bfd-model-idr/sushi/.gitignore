@@ -1,0 +1,8 @@
+# IG Publisher Output
+output/
+fsh-generated/
+temp/
+input-cache/
+publisher.jar
+*.log
+.DS_Store
