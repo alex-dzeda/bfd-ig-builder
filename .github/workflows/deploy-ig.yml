@@ -2,9 +2,11 @@ name: Deploy IG to GitHub Pages
 
 on:
   push:
-    branches: [ main ] # Trigger on push to main branch
+    branches: [ main, master ] # Trigger on push to main or master branch
     paths:
-      - 'apps/bfd-model-idr/sushi/**' # Only run when IG files change
+      - 'apps/bfd-model-idr/sushi/**'
+  workflow_dispatch: # Allows manual triggering from the Actions tab
+
 
 permissions:
   contents: read
